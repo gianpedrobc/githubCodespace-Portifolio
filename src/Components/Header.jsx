@@ -1,31 +1,27 @@
 /**
  * Header component
  *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
+ * Barra de navegação fixa no topo da página
  */
 import React from "react";
+import { apresentacao, siteProps } from "../data/mockData";
 
 const Header = () => {
   return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        justifyContent: "center",
-        gap: "2rem",
-        background: "rgba(255,255,255,0.75)",
-        padding: "1rem",
-        top: 0,
-        width: "100%",
-        zIndex: 10,
-      }}
-    >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#footer">Contact</a>
-    </div>
+    <header className="header">
+      <div className="header-container">
+        <div className="logo">
+          <a href="#home">{apresentacao.nome}</a>
+        </div>
+        <nav className="nav">
+          <a href="#home">#home</a>
+          <a href="#projetos">#projetos</a>
+          <a href="#skills">#skills</a>
+          <a href="#certificados">#certificados</a>
+          <a href="#sobre-mim">#sobre-mim</a>
+        </nav>
+      </div>
+    </header>
   );
 };
 
